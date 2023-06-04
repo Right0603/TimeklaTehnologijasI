@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/RezekneIcon.ico" type="image/x-icon">
+    <link rel = "stylesheet" href = "styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Par Rēzekni</title>
+</head>
+<body>
+    <div class = "container-sm-12">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-2 border-bottom" style="background-color: #dbdbdb;">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4 mx-3 my-2"><img src="https://rezekne.lv/wp-content/uploads/2020/05/rezeknes-logo-krasains-01-liels-m.png" class="img-fluid" alt="Responsive image" width ="140" height="40"></span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./index.html')" >Galvenā lapa</button></li>
+            <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./ParRezekni.html')">Par Rēzekni</button></li>
+        </ul>
+      </header>
+          <div class = "row">
+            <div class = "col-sm-4 p-3">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin: 7px">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img\festivala-parks1-1024x576.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img\4000-15468-aleksandrs_lebeds_6.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class = "col-sm-8 p-3">
+                <h3>Rēzekne</h3>
+                <p>Rēzekne ir viena no desmit Latvijas valstspilsētām Rēzeknes upes ielejā Latgales vidienē. Izdevīgais ģeogrāfiskais stāvoklis, pilsētas loma rūpniecībā, kultūras un izglītības jomā nosaka Rēzeknes reģionālo un valstisko nozīmību. To mēdz dēvēt arī par "Latgales sirdi" — šī nozīme atspoguļota arī pilsētas ģerbonī, kura pamatā ir Latgales kultūrvēsturiskā novada ģerbonis, bet pie tā sirds — vairogs Latvijas valsts karoga krāsās.</p><br>
+                <p>Vēsturnieki apgalvo, ka paugurainais apvidus upes līkumā bija apdzīvots jau sirmā senatnē. No 13. līdz 16. gs. pašreizējā Rēzeknes teritorija bija Livonijas valsts pils novada centrs. Pirmo reizi rakstos mūsu pilsēta minēta 1285. gadā ar nosaukumu „Rositten”.</p>
+            </div>
+          </div>
+          <div id="app">
+            <div class="search-wrapper panel-heading col-sm-12">
+              <input class="search" type="text" v-model="search" placeholder="Meklēt..." size="60"/> <br> <br>
+            </div>  
+            <table class="table table-dark" id="myTable">
+              <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Pilsēta</th>
+                    <th scope="col">Attālums</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="product in filteredProducts" :key="product.id">
+                    <td scole="col">{{ product.id }}</td>
+                    <td>{{ product.city }}</td>
+                    <td>{{ product.distance }}</td>
+                </tr>
+              </tbody>
+             </table>
+          </div>
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mx-3 text-muted">Rēzekne - pilsēta Latgales sirdī</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+      Vue.createApp({
+  data() {
+    return {
+      products: [
+        {id: 1, city: "Daugavpils", distance: "90km"},
+        {id: 2, city: "Rīga", distance: "240km"},
+        {id: 3, city: "Viļņa", distance: "260km"},
+        {id: 4, city: "Tallina", distance: "360km"},
+        {id: 5, city: "Varšava", distance: "720km"},
+        {id: 6, city: "Berlīne", distance: "1250km"},
+        {id: 7, city: "Parīze", distance: "2200km"},
+        {id: 8, city: "Madrida", distance: "3600km"}
+        
+      ],
+      search: ""
+    };
+  },
+  computed: {
+    filteredProducts() {
+      return this.products.filter(p => {
+        return p.city.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
+      });
+    }
+  }
+}).mount('#app');
+    </script>
+    <script src="myscripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

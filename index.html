@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/RezekneIcon.ico" type="image/x-icon">
+    <link rel = "stylesheet" href = "styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Galvenā lapa</title>
+</head>
+<body onload="main()">
+    <div class = "container-sm-12">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-2 border-bottom" style="background-color: #dbdbdb;">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+              <span class="fs-4 mx-3 my-2"><img src="https://rezekne.lv/wp-content/uploads/2020/05/rezeknes-logo-krasains-01-liels-m.png" class="img-fluid" alt="Responsive image" width ="140" height="40"></span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./index.html')">Galvenā lapa</button></li>
+                <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./ParRezekni.html')">Par Rēzekni</button></li>
+            </ul>
+          </header>
+        <div class = "row my-2 mx-1">
+            <div class="col">
+            </div>
+        </div>
+        <div class="row my-2 mx-1">
+            <div class="col-sm-4">
+                <div class = "image" onclick="next('./GORS.html')">
+                    <img src="img\gors_foto-andrejs-vasjukevics.jpg" 
+                    class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <div class="col-sm-8" style="background-color: #f0f0f0;">
+            <div class = "article" onclick="next('./GORS.html')">
+                <h3 class="header-3">Latgales vēstniecība GORS</h3>
+                <p class="p-mp">Latgales vēstniecība GORS ir Latvijā pirmā no pamatiem celtā akustiskā koncertzāle ar pasaules līmeņa akustiku, viena no ievērojamākajām 2013. gada būvēm Latvijā, kas ir arhitektu Ulda Baloža un Daigas Bikšes projekts. GORS ir jaunais Rēzeknes un Latgales simbols, notikumu centrs ar plašu pasākumu programmu – koncertiem, izstādēm, kino, kā arī labāko vietu darījumu notikumiem – semināriem un konferencēm. Koncertzāles pastāvēšanas laikā tajā uzstājušies gan pasaulē zināmi mākslinieki, gan Latvijas spožākās zvaigznes.</p>
+                <p class="rating" id="rating-GORS"> Jūs vēl neesat novērtējuši šo apskates objektu! </p>
+            </div>
+            </div>
+        </div>
+        <div class="row my-2 mx-1">
+            <div class="col-sm-4">
+                <div class = "image" onclick="next('./OlimpiskaisCentrs.html')">
+                    <img src="img\tol_9913-e1602677369889-1024x579 (1).jpg"
+                    class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <div class="col-sm-8" style="background-color: #f0f0f0;">
+                <div class = "article" onclick="next('./OlimpiskaisCentrs.html')">
+                    <h3 class="header-3">Olimpiskais centrs Rēzekne</h3>
+                    <p class ="p-mp"> Mākslīgā seguma futbola laukums ar betona pamatnes tribīnēm 1000 skatītāju vietām, viesnīca “Restart”, āra peldbaseins ar sešiem 25 m celiņiem, atpūtas zona ar divām burbuļvannām un mazo baseinu ar slīdkalniņu bērniem, sauļošanās zviļņiem, tribīnēm. Baseins aprīkots ar profesionālu laika fiksācijas sistēmu, kas dod iespēju rīkot augsta mēroga sacensības.</p>
+                    <p class="rating" id="rating-Olympic"> Jūs vēl neesat novērtējuši šo apskates objektu! </p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-2 mx-1">
+            <div class="col-sm-4">
+                <div class = "image" onclick="next('./muzejs.html')">
+                    <img src="img\Latgales_Kulturvestures_muzejs-e1555326741741-1024x576 (1).jpg"
+                    class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <div class="col-sm-8" style="background-color: #f0f0f0;">
+                <div class = "article" onclick="next('./muzejs.html')">
+                    <h3 class="header-3">Latgales Kultūrvēstures muzejs</h3>
+                    <p class="p-mp">Latgales Kultūrvēstures muzejs atrodas pilsētas administratīvajā centrā, netālu no Latgales Atbrīvošanas pieminekļa „Vienoti Latvijai”. Laukumā pretī muzeja centrālajai ieejai ikviens var piestāt un nofotografēties pie dzejnieka, mākslinieka un bijušā muzeja darbinieka Antona Kūkoja (1940–2007) pieminekļa (atklāts 2012. g.). Vasaras mēnešos leģendu par princesi Rozi atgādina krāšņi ziedošas rozes.</p>
+                    <p class="rating" id="rating-Museum"> Jūs vēl neesat novērtējuši šo apskates objektu! </p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-2 mx-1">
+            <div class="col-sm-4"> 
+                <div class = "image" onclick="next('./katedrale.html')">
+                    <img src="img\Rezekne_katedrale.jpg"
+                    class="img-fluid" alt="Responsive image">
+                </div>  
+            </div>
+            <div class="col-sm-8" style="background-color: #f0f0f0;">
+                <div class = "article" onclick="next('./katedrale.html')">
+                    <h3 class="header-3">Rēzeknes Vissvētākās Jēzus Sirds Romas katoļu katedrāle</h3>
+                    <p class="p-mp">Vienā no pilsētas pakalniem 1685. g. par Krakovas vojevodas Beļinska līdzekļiem tika uzcelta koka baznīca, kura 1887. g. nodega negaisa laikā. Sarkano ķieģeļu divtorņu baznīcu pēc inženiera Floriana Viganovska projekta sāka būvēt 1888. gadā un iesvētīja 1904. gadā. Ēkas fasādes daļa ir veidota pseidoromānikas stilā, bet torņu augšdaļa, logi un citi elementi – pseidogotikas stilā.
+                        Katedrālē ir pieci altāri, no kuriem centrālais altāris veltīts Vissvētākās Jēzus Sirds godam.</p>
+                    <p class="rating" id="rating-Cathedral"> Jūs vēl neesat novērtējuši šo apskates objektu! </p>
+                </div>
+            </div>
+        </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mx-3 text-muted">Rēzekne - pilsēta Latgales sirdī</span>
+            </div>
+        </footer>
+    </div>
+    <script src="myscripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

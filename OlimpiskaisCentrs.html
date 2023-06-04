@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/RezekneIcon.ico" type="image/x-icon">
+
+    <link rel = "stylesheet" href = "styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Olimpiskais centrs Rēzekne</title>
+</head>
+<body onload="accordionLogic()">
+    <div class = "container-sm-12">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-2 border-bottom" style="background-color: #dbdbdb;">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4 mx-3 my-2"><img src="https://rezekne.lv/wp-content/uploads/2020/05/rezeknes-logo-krasains-01-liels-m.png" class="img-fluid" alt="Responsive image" width ="140" height="40"></span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./index.html')" >Galvenā lapa</button></li>
+            <li class="nav-item mx-2 mt-2"><button class="btn btn-dark" onclick="next('./ParRezekni.html')">Par Rēzekni</button></li>
+        </ul>
+      </header>
+          <div class = "row">
+            <div class = "col-sm-4 p-3">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img\tol_9913-e1602677369889-1024x579.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img\mipim_awards.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class = "col-sm-8">
+                <h3 class="header-3">Olimpiskais centrs Rēzekne</h3>
+                <p>Mākslīgā seguma futbola laukums ar betona pamatnes tribīnēm 1000 skatītāju vietām, viesnīca “Restart”, āra peldbaseins ar sešiem 25 m celiņiem, atpūtas zona ar divām burbuļvannām un mazo baseinu ar slīdkalniņu bērniem, sauļošanās zviļņiem, tribīnēm. Baseins aprīkots ar profesionālu laika fiksācijas sistēmu, kas dod iespēju rīkot augsta mēroga sacensības. Daudzfunkcionālā arēna ar sporta spēļu zāli ar skatītāju tribīnēm (727 sēdvietas) un ledus arēnu ar skatītāju tribīnēm (586 sēdvietas), pieejamas ģērbtuves, tiesnešu istaba, trenažieru zāle ar aerobikas zonu un saunu.</p><br>
+                <p>Rēzeknes ledus halle piedāvā izbaudīt ziemas sporta veidu burvību neatkarīgi no gadalaika un laikapstākļiem! Te tiek aicināti visi slidot gribētāji, gan tie, kas jau aizmirsuši bērnībā apgūtās slidošanas prasmes, gan tie, kas nekad iepriekš nav stāvējuši uz slidām, un tie, kas ir aizrautīgi slidotāji.
+                  Olimpiskā centra “Rēzekne” ledus hallē slidot var gan ar savām slidām, gan iznomāt tās uz vietas. Pieredzējušiem slidotājiem ir iespēja uzasināt savas slidas, savukārt, iesācēji var iznomāt īpašus slidošanas apmācības trenažierus – “lācīšus”.</p>
+            </div>
+          </div>
+          <div class = "accordion" style="margin: auto;">
+            <div class = "contentBx">
+              <div class = "label">
+                Noderīgas saites
+              </div>
+              <div class = "content">
+                <p>Olimpiskā centra Rēzekne mājaslapa - <a href="https://ocr.lv/">ocr.lv</a></p>
+                <p>Raksts par olimpisko centru Rēzeknes pilsētas mājaslapā - <a href="https://rezekne.lv/sporta-bazes/ocr/">rezekne.lv/sporta-bazes/ocr</a></p>
+              </div>
+            </div>
+            <div class = "contentBx">
+              <div class = "label">
+                Papildus informācija par objektu
+              </div>
+              <div class = "content">
+                <p>Olimpiskā centra tehnisko projektu izstrādā arhitektu birojs SIA "REM PRO". Daudzfunkcionālās zāles un ledus halles komplekss ir iecerēts askētiskā stilā. 
+                  Katra ēka apvienos divus apjomus, kuri veidoti kā melnā un baltā kontrasts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sliderContainer">
+            <h3>Novērtējiet apskates objektu no 0 līdz 100!</h3>
+            <div class = "slider">
+              <input id= "input-Olympic" type="range" value = "50" min = "0" max = "100" oninput="setRating('input-Olympic', 'output-Olympic', 'rating-Olympic')">
+              <p id="output-Olympic">50</p>
+            </div>
+          </div>
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mx-3 text-muted">Rēzekne - pilsēta Latgales sirdī</span>
+            </div>
+        </footer>
+    </div>
+    <script src="myscripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
